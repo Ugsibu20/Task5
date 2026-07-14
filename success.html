@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful | ElectroMart</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="top-bar">
+            🎉 Thank You For Shopping With ElectroMart
+        </div>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="index.html">
+                    <h2>ElectroMart</h2>
+                </a>
+            </div>
+
+            <div class="nav-icons">
+
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                </a>
+
+                <a href="products.html">
+                    <i class="fas fa-store"></i>
+                </a>
+
+                <a href="contact.html">
+                    <i class="fas fa-headset"></i>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= SUCCESS SECTION ================= -->
+
+    <section class="success-page">
+
+        <div class="success-card">
+
+            <div class="success-icon">
+
+                <i class="fas fa-check-circle"></i>
+
+            </div>
+
+            <h1>Order Placed Successfully!</h1>
+
+            <p>
+
+                Thank you for shopping with <strong>ElectroMart</strong>.
+
+            </p>
+
+            <p>
+
+                Your payment has been received successfully.
+
+            </p>
+
+            <div class="order-details">
+
+                <h3>Order Information</h3>
+
+                <p>
+
+                    <strong>Order ID:</strong>
+
+                    <span id="orderId">
+
+                        EM20260001
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Order Date:</strong>
+
+                    <span id="orderDate">
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Payment Status:</strong>
+
+                    <span id="paymentStatus" class="success-status">
+
+                        Paid Successfully
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Estimated Delivery:</strong>
+
+                    <span id="estimatedDelivery">3 - 5 Business Days</span>
+
+                </p>
+
+            </div>
+
+            <div class="success-buttons">
+
+                <a href="products.html" class="btn">
+
+                    Continue Shopping
+
+                </a>
+
+                <a href="index.html" class="btn-outline">
+
+                    Back To Home
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= NEXT STEPS ================= -->
+
+    <section class="order-info">
+
+        <h2>What Happens Next?</h2>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <i class="fas fa-box"></i>
+
+                <h3>Order Processing</h3>
+
+                <p>
+
+                    We are preparing your order for shipment.
+
+                </p>
+
+            </div>
+
+            <div class="info-card">
+
+                <i class="fas fa-truck"></i>
+
+                <h3>Shipping</h3>
+
+                <p>
+
+                    Your package will be dispatched within 24 hours.
+
+                </p>
+
+            </div>
+
+            <div class="info-card">
+
+                <i class="fas fa-map-marker-alt"></i>
+
+                <h3>Tracking</h3>
+
+                <p>
+
+                    Tracking details will be shared via email.
+
+                </p>
+
+            </div>
+
+            <div class="info-card">
+
+                <i class="fas fa-headset"></i>
+
+                <h3>Support</h3>
+
+                <p>
+
+                    Need help? Contact our customer support anytime.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+
+                <h2>ElectroMart</h2>
+
+                <p>
+
+                    Your Trusted Electronics Store.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Customer Support</h3>
+
+                <p>Email : support@electromart.com</p>
+                <p>Phone : +91 9876543210</p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 ElectroMart. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script>
+
+        const currentOrder = JSON.parse(localStorage.getItem("currentOrder") || "null");
+
+        if (currentOrder) {
+            document.getElementById("orderId").textContent = currentOrder.orderId || "-";
+
+            const orderDate = currentOrder.orderDate || currentOrder.paymentDate;
+
+            document.getElementById("orderDate").textContent = orderDate
+                ? new Date(orderDate).toLocaleDateString("en-IN", {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                })
+                : "-";
+
+            document.getElementById("paymentStatus").textContent =
+                currentOrder.status === "Confirmed" ? "Cash on Delivery" : "Paid Successfully";
+
+            document.getElementById("estimatedDelivery").textContent =
+                currentOrder.estimatedDelivery || "3 - 5 Business Days";
+        }
+
+        localStorage.setItem("cart", "[]");
+
+    </script>
+
+</body>
+
+</html>

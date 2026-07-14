@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | ElectroMart</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="top-bar">
+            🔒 100% Secure Payment
+        </div>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="index.html">
+                    <h2>ElectroMart</h2>
+                </a>
+            </div>
+
+            <div class="nav-icons">
+
+                <a href="wishlist.html">
+                    <i class="fas fa-heart"></i>
+                </a>
+
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= PAGE TITLE ================= -->
+
+    <section class="page-title">
+
+        <h1>Secure Payment</h1>
+
+        <p>
+
+            <a href="index.html">Home</a>
+
+            /
+
+            <a href="checkout.html">Checkout</a>
+
+            /
+
+            Payment
+
+        </p>
+
+    </section>
+
+    <!-- ================= PAYMENT ================= -->
+
+    <section class="payment-container">
+
+        <!-- Left -->
+
+        <div class="payment-methods">
+
+            <h2>Select Payment Method</h2>
+
+            <div class="payment-options">
+
+                <label>
+
+                    <input type="radio"
+                        name="payment"
+                        value="card"
+                        checked>
+
+                    Credit / Debit Card
+
+                </label>
+
+                <label>
+
+                    <input type="radio"
+                        name="payment"
+                        value="upi">
+
+                    UPI
+
+                </label>
+
+                <label>
+
+                    <input type="radio"
+                        name="payment"
+                        value="cod">
+
+                    Cash On Delivery
+
+                </label>
+
+            </div>
+
+            <!-- Card Payment -->
+
+            <div id="cardPayment">
+
+                <h3>Card Details</h3>
+
+                <input
+                    type="text"
+                    id="cardName"
+                    placeholder="Card Holder Name">
+
+                <input
+                    type="text"
+                    id="cardNumber"
+                    maxlength="19"
+                    placeholder="Card Number">
+
+                <div class="row">
+
+                    <input
+                        type="text"
+                        id="expiry"
+                        placeholder="MM/YY">
+
+                    <input
+                        type="password"
+                        id="cvv"
+                        maxlength="3"
+                        placeholder="CVV">
+
+                </div>
+
+            </div>
+
+            <!-- UPI -->
+
+            <div id="upiPayment" style="display:none;">
+
+                <h3>UPI Payment</h3>
+
+                <input
+                    type="text"
+                    id="upiId"
+                    placeholder="example@upi">
+
+                <p>
+
+                    Example:
+                    yourname@paytm
+
+                </p>
+
+            </div>
+
+            <!-- COD -->
+
+            <div id="codPayment" style="display:none;">
+
+                <h3>Cash On Delivery</h3>
+
+                <p>
+
+                    Pay in cash when your order is delivered.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Right -->
+
+        <aside class="payment-summary">
+
+            <h2>Order Summary</h2>
+
+            <div id="paymentItems">
+
+                <!-- JavaScript -->
+
+            </div>
+
+            <hr>
+
+            <div class="summary-item">
+
+                <span>Subtotal</span>
+
+                <span id="subtotal">
+                    ₹0
+                </span>
+
+            </div>
+
+            <div class="summary-item">
+
+                <span>Shipping</span>
+
+                <span>
+                    ₹99
+                </span>
+
+            </div>
+
+            <div class="summary-item">
+
+                <span>Discount</span>
+
+                <span id="discount">
+                    ₹0
+                </span>
+
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+
+                <span>Total</span>
+
+                <span id="grandTotal">
+                    ₹99
+                </span>
+
+            </div>
+
+            <button
+                id="payNow"
+                class="btn">
+
+                Pay Now
+
+            </button>
+
+        </aside>
+
+    </section>
+
+    <!-- ================= SECURITY ================= -->
+
+    <section class="security-info">
+
+        <div class="security-card">
+
+            <i class="fas fa-lock"></i>
+
+            <h3>SSL Secured</h3>
+
+            <p>
+
+                Your payment information is encrypted.
+
+            </p>
+
+        </div>
+
+        <div class="security-card">
+
+            <i class="fas fa-shield-alt"></i>
+
+            <h3>Safe Payments</h3>
+
+            <p>
+
+                PCI-DSS compliant secure checkout.
+
+            </p>
+
+        </div>
+
+        <div class="security-card">
+
+            <i class="fas fa-headset"></i>
+
+            <h3>24×7 Support</h3>
+
+            <p>
+
+                Need help? We're always here.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+
+                <h2>ElectroMart</h2>
+
+                <p>
+
+                    Your Trusted Electronics Store.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="products.html">Products</a></li>
+
+                    <li><a href="cart.html">Cart</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>support@electromart.com</p>
+
+                <p>+91 9876543210</p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 ElectroMart. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="toast">
+        <span id="toastMessage">Success!</span>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/payment.js"></script>
+
+</body>
+
+</html>

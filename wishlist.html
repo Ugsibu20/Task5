@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist | ElectroMart</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="top-bar">
+            🚚 Free Shipping on Orders Above ₹999
+        </div>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="index.html">
+                    <h2>ElectroMart</h2>
+                </a>
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search products...">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="nav-icons">
+
+                <button id="darkMode">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <a href="wishlist.html" class="active">
+                    <i class="fas fa-heart"></i>
+                    <span id="wishlistCount">0</span>
+                </a>
+
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cartCount">0</span>
+                </a>
+
+                <a href="login.html">
+                    <i class="fas fa-user"></i>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= PAGE TITLE ================= -->
+
+    <section class="page-title">
+
+        <h1>My Wishlist</h1>
+
+        <p>
+            <a href="index.html">Home</a> /
+            <span>Wishlist</span>
+        </p>
+
+    </section>
+
+    <!-- ================= WISHLIST ================= -->
+
+    <section class="wishlist-section">
+
+        <div class="wishlist-header">
+
+            <h2>Saved Products</h2>
+
+            <button id="clearWishlist" class="btn-danger">
+                Clear Wishlist
+            </button>
+
+        </div>
+
+        <div id="wishlistContainer" class="product-grid">
+
+            <!-- Products loaded by JavaScript -->
+
+        </div>
+
+    </section>
+
+    <!-- ================= EMPTY WISHLIST ================= -->
+
+    <section id="emptyWishlist" class="empty-cart">
+
+        <i class="fas fa-heart-broken"></i>
+
+        <h2>Your Wishlist is Empty</h2>
+
+        <p>
+
+            Save products you like and they'll appear here.
+
+        </p>
+
+        <a href="products.html" class="btn">
+
+            Browse Products
+
+        </a>
+
+    </section>
+
+    <!-- ================= RECOMMENDED PRODUCTS ================= -->
+
+    <section class="recommended">
+
+        <h2>You May Also Like</h2>
+
+        <div id="recommendedProducts" class="product-grid">
+
+            <!-- JavaScript -->
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+
+                <h2>ElectroMart</h2>
+
+                <p>
+                    Your trusted destination for premium electronics.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Customer Support</h3>
+
+                <p>Email: support@electromart.com</p>
+                <p>Phone: +91 9876543210</p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 ElectroMart. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <!-- Toast Notification -->
+
+    <div id="toast" class="toast">
+        <span id="toastMessage">Success!</span>
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wishlist.js"></script>
+
+</body>
+
+</html>

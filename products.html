@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | ElectroMart</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+    <!-- ===========================
+         TOP BAR
+    ============================ -->
+
+    <div class="top-bar">
+        Free Shipping on Orders above Rs. 999 | Support: +91 98765 43210
+    </div>
+
+    <!-- ===========================
+         HEADER
+    ============================ -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <h2><i class="fa-solid fa-bolt"></i> ElectroMart</h2>
+                </a>
+            </div>
+
+            <!-- Search -->
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search electronics...">
+
+                <button id="searchBtn">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+
+            </div>
+
+            <!-- Icons -->
+            <div class="nav-icons">
+
+                <a href="wishlist.html">
+                    <i class="fa-regular fa-heart"></i>
+                    <span id="wishlistCount">0</span>
+                </a>
+
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cartCount">0</span>
+                </a>
+
+                <a href="login.html">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ===========================
+         NAVIGATION MENU
+    ============================ -->
+
+    <section class="navigation-menu">
+
+        <div class="container">
+
+            <ul class="menu">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="products.html" class="active">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        Cart
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+         PAGE TITLE
+    ============================ -->
+
+    <section class="page-title fade-up">
+
+        <div class="container">
+
+            <h1>Our Products</h1>
+
+            <p>
+                <a href="index.html">Home</a>
+                /
+                <span>Products</span>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+         FILTER SECTION
+    ============================ -->
+
+    <section class="product-filter">
+
+        <div class="container">
+
+            <div class="filter-wrapper">
+
+                <!-- Search -->
+                <div class="filter-box">
+
+                    <label>Search Product</label>
+
+                    <input
+                        type="text"
+                        id="productSearch"
+                        placeholder="Search laptop, mobile, headphones...">
+
+                </div>
+
+                <!-- Category -->
+                <div class="filter-box">
+
+                    <label>Category</label>
+
+                    <select id="categoryFilter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="Laptop">
+                            Laptop
+                        </option>
+
+                        <option value="Mobile">
+                            Mobile
+                        </option>
+
+                        <option value="Headphones">
+                            Headphones
+                        </option>
+
+                        <option value="Smart Watch">
+                            Smart Watch
+                        </option>
+
+                        <option value="Camera">
+                            Camera
+                        </option>
+
+                        <option value="Speaker">
+                            Speaker
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Price -->
+                <div class="filter-box">
+
+                    <label>Maximum Price</label>
+
+                    <select id="priceFilter">
+
+                        <option value="all">
+                            All Prices
+                        </option>
+
+                        <option value="5000">
+                            Under Rs. 5,000
+                        </option>
+
+                        <option value="10000">
+                            Under Rs. 10,000
+                        </option>
+
+                        <option value="20000">
+                            Under Rs. 20,000
+                        </option>
+
+                        <option value="50000">
+                            Under Rs. 50,000
+                        </option>
+
+                        <option value="100000">
+                            Under Rs. 1,00,000
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Sort -->
+                <div class="filter-box">
+
+                    <label>Sort By</label>
+
+                    <select id="sortProducts">
+
+                        <option value="default">
+                            Default
+                        </option>
+
+                        <option value="low-high">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high-low">
+                            Price: High to Low
+                        </option>
+
+                        <option value="a-z">
+                            Name: A to Z
+                        </option>
+
+                        <option value="z-a">
+                            Name: Z to A
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- Result Count -->
+
+            <div class="results-info">
+
+                <h3>
+
+                    Showing
+
+                    <span id="productCount">
+                        30
+                    </span>
+
+                    Products
+
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+         PRODUCTS SECTION
+         (Continue in Part 2)
+    ============================ -->
+
+    <main class="products-page">
+
+        <div class="container">
+
+            <div id="productsContainer" class="product-grid">
+                                <!-- Product cards will be loaded here by products.js -->
+
+                <div class="loader" id="loader"></div>
+
+            </div>
+
+            <!-- ===========================
+                 PAGINATION
+            ============================ -->
+
+            <div class="pagination">
+
+                <button id="prevPage">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+
+                <button class="active">1</button>
+
+                <button>2</button>
+
+                <button>3</button>
+
+                <button id="nextPage">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ===========================
+         FEATURE SECTION
+    ============================ -->
+
+    <section class="features section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Why Shop With Us?</h2>
+                <p>Experience secure shopping with premium electronics.</p>
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h3>Free Shipping</h3>
+                    <p>Free delivery on orders above Rs. 999.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <h3>Easy Returns</h3>
+                    <p>7-day hassle-free replacement policy.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Secure Payment</h3>
+                    <p>100% encrypted online payment gateway.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>24x7 Support</h3>
+                    <p>Dedicated customer support anytime.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+         RECENTLY VIEWED
+    ============================ -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Recently Viewed</h2>
+                <p>Products you've explored recently.</p>
+            </div>
+
+            <div class="product-grid" id="recentProducts">
+
+                <!-- Loaded dynamically -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+         BEST SELLERS
+    ============================ -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Best Sellers</h2>
+                <p>Top-rated electronics loved by customers.</p>
+            </div>
+
+            <div class="product-grid" id="bestSellerProducts">
+
+                <!-- Loaded dynamically -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- ===========================
+         NEWSLETTER
+    ============================ -->
+
+    <section class="newsletter section">
+
+        <div class="container">
+
+            <h2>Subscribe to Our Newsletter</h2>
+
+            <p>
+                Get exclusive offers, discounts, and the latest electronics delivered to your inbox.
+            </p>
+
+            <form id="newsletterForm">
+
+                <input
+                    type="email"
+                    id="newsletterEmail"
+                    placeholder="Enter your email address"
+                    required>
+
+                <button type="submit" class="btn btn-secondary">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+         FOOTER
+    ============================ -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <!-- Company -->
+
+            <div>
+
+                <h2>
+                    <i class="fa-solid fa-bolt"></i>
+                    ElectroMart
+                </h2>
+
+                <p>
+                    Your trusted online destination for premium electronics,
+                    gadgets, accessories, and smart devices.
+                </p>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="products.html">Products</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Customer -->
+
+            <div>
+
+                <h3>Customer Service</h3>
+
+                <ul>
+
+                    <li><a href="#">Shipping Policy</a></li>
+
+                    <li><a href="#">Return Policy</a></li>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms & Conditions</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Bhubaneswar, Odisha, India
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    support@electromart.com
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="copyright">
+
+            <p>
+
+               &copy; 2026 ElectroMart.
+
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ===========================
+         QUICK VIEW MODAL
+    ============================ -->
+
+    <div class="modal" id="quickViewModal">
+
+        <div class="modal-content">
+
+            <span class="close-modal" id="closeModal">
+
+                &times;
+
+            </span>
+
+            <div id="quickViewContent">
+
+                <!-- Product details loaded by JavaScript -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===========================
+         TOAST NOTIFICATION
+    ============================ -->
+
+    <div class="toast" id="toast">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span id="toastMessage">
+
+            Product added successfully!
+
+        </span>
+
+    </div>
+
+    <!-- ===========================
+         BACK TO TOP
+    ============================ -->
+
+    <button id="backToTop" class="back-to-top">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+        <!-- ===========================
+         JAVASCRIPT FILES
+    ============================ -->
+
+    <!-- Product Data -->
+    <script src="js/data.js"></script>
+
+    <!-- Utility Functions -->
+    <script src="js/utils.js"></script>
+
+    <!-- Common Functions -->
+    <script src="js/main.js"></script>
+
+    <!-- Products Page Logic -->
+    <script src="js/products.js"></script>
+
+</body>
+</html>

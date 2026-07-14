@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | ElectroMart</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="top-bar">
+            🚚 Free Shipping on Orders Above ₹999
+        </div>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="index.html">
+                    <h2>ElectroMart</h2>
+                </a>
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search Products...">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="nav-icons">
+
+                <button id="darkMode">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <a href="wishlist.html">
+                    <i class="fas fa-heart"></i>
+                </a>
+
+                <a href="cart.html" class="active">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cartCount">0</span>
+                </a>
+
+                <a href="login.html">
+                    <i class="fas fa-user"></i>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= PAGE TITLE ================= -->
+
+    <section class="page-title">
+
+        <h1>Shopping Cart</h1>
+
+        <p>
+
+            <a href="index.html">Home</a>
+
+            /
+
+            <span>Cart</span>
+
+        </p>
+
+    </section>
+
+    <!-- ================= CART ================= -->
+
+    <section class="cart-container">
+
+        <!-- LEFT -->
+
+        <div class="cart-items">
+
+            <h2>Your Cart</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Product</th>
+
+                        <th>Price</th>
+
+                        <th>Quantity</th>
+
+                        <th>Total</th>
+
+                        <th>Remove</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="cartTable">
+
+                    <!-- Dynamic Cart Items -->
+
+                </tbody>
+
+            </table>
+
+            <div class="cart-buttons">
+
+                <a href="products.html" class="btn-outline">
+
+                    Continue Shopping
+
+                </a>
+
+                <button id="clearCart" class="btn-danger">
+
+                    Clear Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="cart-summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-item">
+
+                <span>Subtotal</span>
+
+                <span id="subtotal">₹0</span>
+
+            </div>
+
+            <div class="summary-item">
+
+                <span>Shipping</span>
+
+                <span id="shipping">₹99</span>
+
+            </div>
+
+            <div class="summary-item">
+
+                <span>Discount</span>
+
+                <span id="discount">₹0</span>
+
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+
+                <span>Total</span>
+
+                <span id="grandTotal">₹99</span>
+
+            </div>
+
+            <!-- Coupon -->
+
+            <div class="coupon">
+
+                <h3>Coupon Code</h3>
+
+                <input
+                    type="text"
+                    id="couponCode"
+                    placeholder="Enter Coupon">
+
+                <button id="applyCoupon" class="btn">
+
+                    Apply Coupon
+
+                </button>
+
+            </div>
+
+            <a href="checkout.html" class="checkout-btn">
+
+                Proceed To Checkout
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= EMPTY CART ================= -->
+
+    <section id="emptyCart" class="empty-cart">
+
+        <i class="fas fa-shopping-cart"></i>
+
+        <h2>Your Cart is Empty</h2>
+
+        <p>
+
+            Looks like you haven't added any products yet.
+
+        </p>
+
+        <a href="products.html" class="btn">
+
+            Shop Now
+
+        </a>
+
+    </section>
+
+    <!-- ================= RECOMMENDED PRODUCTS ================= -->
+
+    <section class="recommended">
+
+        <h2>You May Also Like</h2>
+
+        <div id="recommendedProducts" class="product-grid">
+
+            <!-- JS -->
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+
+                <h2>ElectroMart</h2>
+
+                <p>
+
+                    India's Trusted Electronics Shopping Destination.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="products.html">Products</a></li>
+
+                    <li><a href="wishlist.html">Wishlist</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>Email : support@electromart.com</p>
+
+                <p>Phone : +91 9876543210</p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 ElectroMart. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <!-- Toast -->
+
+    <div id="toast" class="toast">
+        <span id="toastMessage">Success!</span>
+    </div>
+
+    <!-- JS -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+
+</html>

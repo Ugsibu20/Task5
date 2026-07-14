@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroMart | Electronics Store</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <h1>ElectroMart</h1>
+    </div>
+
+    <!-- Back To Top -->
+    <button id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <p>Free Shipping on Orders Over Rs. 999</p>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+
+            <div class="logo">
+                <h2>ElectroMart</h2>
+            </div>
+
+            <!-- Search -->
+            <div class="search-box">
+                <input type="text" placeholder="Search products...">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <!-- Icons -->
+            <div class="nav-icons">
+
+                <button id="darkMode">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <a href="wishlist.html">
+                    <i class="fas fa-heart"></i>
+                </a>
+
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+
+                <a href="login.html">
+                    <i class="fas fa-user"></i>
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!-- Menu -->
+        <div class="menu">
+
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Latest Electronics Collection</h1>
+
+            <p>
+                Discover smartphones, laptops, headphones,
+                smart watches and much more.
+            </p>
+
+            <a href="products.html" class="btn">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <h2>Shop By Category</h2>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                <i class="fas fa-mobile-screen"></i>
+                <h3>Mobiles</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fas fa-laptop"></i>
+                <h3>Laptops</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fas fa-headphones"></i>
+                <h3>Headphones</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fas fa-tablet-screen-button"></i>
+                <h3>Tablets</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fas fa-gamepad"></i>
+                <h3>Gaming</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURED PRODUCTS ================= -->
+
+    <section class="featured">
+
+        <h2>Featured Products</h2>
+
+        <div id="featuredProducts" class="product-grid">
+
+            <!-- Products will come from JavaScript -->
+
+        </div>
+
+    </section>
+
+    <!-- ================= FLASH SALE ================= -->
+
+    <section class="flash-sale">
+
+        <div class="sale-content">
+
+            <h2>Flash Sale</h2>
+
+            <h1>Up To 50% OFF</h1>
+
+            <p>Limited Time Offer</p>
+
+            <a href="products.html" class="btn">
+                Buy Now
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TRENDING ================= -->
+
+    <section class="trending">
+
+        <h2>Trending Products</h2>
+
+        <div id="trendingProducts" class="product-grid">
+
+        </div>
+
+    </section>
+
+    <!-- ================= REVIEWS ================= -->
+
+    <section class="reviews">
+
+        <h2>Customer Reviews</h2>
+
+        <div class="review-container">
+
+            <div class="review-card">
+
+                <h3>Rahul Sharma</h3>
+
+                <p>&starf;&starf;&starf;&starf;&starf;</p>
+
+                <p>
+                    Amazing products and very fast delivery.
+                </p>
+
+            </div>
+
+            <div class="review-card">
+
+                <h3>Priya Singh</h3>
+
+                <p>&starf;&starf;&starf;&starf;&starf;</p>
+
+                <p>
+                    Best online electronics shopping website.
+                </p>
+
+            </div>
+
+            <div class="review-card">
+
+                <h3>Amit Kumar</h3>
+
+                <p>&starf;&starf;&starf;&starf;&star;</p>
+
+                <p>
+                    Great customer support and genuine products.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <h2>Subscribe</h2>
+
+        <p>
+            Get latest offers directly in your inbox.
+        </p>
+
+        <div class="newsletter-box">
+
+            <input
+                type="email"
+                placeholder="Enter your Email">
+
+            <button class="btn">
+                Subscribe
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+
+                <h2>ElectroMart</h2>
+
+                <p>
+                    Your trusted electronics shopping destination.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="products.html">Products</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>Email : support@electromart.com</p>
+
+                <p>Phone : +91 9876543210</p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            &copy; 2026 ElectroMart. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="toast">
+        <span id="toastMessage">Success!</span>
+    </div>
+
+    <!-- JS -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
