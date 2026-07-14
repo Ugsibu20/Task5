@@ -1,0 +1,465 @@
+/* ==========================================
+   RESPONSIVE.CSS
+   ElectroMart
+========================================== */
+
+/* ==========================================
+   Large Devices (≤1200px)
+========================================== */
+
+@media (max-width:1200px){
+
+    .container{
+        width:95%;
+    }
+
+    .navbar{
+        padding:0 5%;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .hero{
+        gap:30px;
+    }
+
+}
+
+/* ==========================================
+   Laptop (≤992px)
+========================================== */
+
+@media (max-width:992px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-content{
+        order:2;
+    }
+
+    .hero-image{
+        order:1;
+    }
+
+    .hero-content h1{
+        font-size:2.6rem;
+    }
+
+    .search-box{
+        width:300px;
+    }
+
+    .about-section,
+    .contact-section,
+    .cart-container,
+    .checkout-container,
+    .payment-container,
+    .auth-card{
+        grid-template-columns:1fr;
+    }
+
+    .auth-image{
+        padding:40px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .feature-grid,
+    .team-grid,
+    .review-container,
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* ==========================================
+   Tablet (≤768px)
+========================================== */
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-wrap:wrap;
+        height:auto;
+        padding:15px;
+        gap:15px;
+    }
+
+    .logo{
+        width:100%;
+        text-align:center;
+    }
+
+    .search-box{
+        width:100%;
+        order:3;
+    }
+
+    .nav-icons{
+        width:100%;
+        justify-content:center;
+    }
+
+    .hero{
+        min-height:auto;
+        padding-top:40px;
+    }
+
+    .hero-content h1{
+        font-size:2.2rem;
+    }
+
+    .page-title h1{
+        font-size:2rem;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .feature-grid,
+    .team-grid,
+    .review-container,
+    .stats,
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+
+    .row{
+        flex-direction:column;
+    }
+
+    .product-actions{
+        flex-direction:column;
+    }
+
+    .success-buttons{
+        flex-direction:column;
+    }
+
+    .social-login{
+        flex-direction:column;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+
+/* ==========================================
+   Mobile (≤576px)
+========================================== */
+
+@media (max-width:576px){
+
+    section{
+        padding:50px 20px;
+    }
+
+    .hero-content h1{
+        font-size:1.8rem;
+    }
+
+    .hero-content p{
+        font-size:15px;
+    }
+
+    .page-title{
+        padding:40px 20px;
+    }
+
+    .page-title h1{
+        font-size:1.8rem;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-card img{
+        height:220px;
+    }
+
+    .newsletter form{
+        flex-direction:column;
+    }
+
+    .newsletter input{
+        border-radius:6px;
+        margin-bottom:10px;
+    }
+
+    .newsletter button{
+        border-radius:6px;
+        width:100%;
+    }
+
+    .pagination{
+        flex-wrap:wrap;
+    }
+
+    .contact-form,
+    .success-card,
+    .auth-form{
+        padding:25px;
+    }
+
+    .auth-image{
+        padding:30px;
+    }
+
+    .team-card img{
+        width:140px;
+        height:140px;
+    }
+
+    .social-icons{
+        flex-wrap:wrap;
+    }
+
+}
+
+/* ==========================================
+   Small Mobile (≤400px)
+========================================== */
+
+@media (max-width:400px){
+
+    body{
+        font-size:14px;
+    }
+
+    .logo h2{
+        font-size:1.5rem;
+    }
+
+    .hero-content h1{
+        font-size:1.5rem;
+    }
+
+    .page-title h1{
+        font-size:1.5rem;
+    }
+
+    .product-title{
+        font-size:16px;
+    }
+
+    .current-price{
+        font-size:20px;
+    }
+
+    .product-actions{
+        gap:8px;
+    }
+
+    .nav-icons{
+        gap:15px;
+    }
+
+    .nav-icons a{
+        font-size:18px;
+    }
+
+    .search-box button{
+        width:50px;
+    }
+
+    .footer-container{
+        text-align:center;
+    }
+
+}
+
+/* ==========================================
+   Landscape Phones
+========================================== */
+
+@media (max-height:500px) and (orientation:landscape){
+
+    .hero{
+        min-height:auto;
+        padding:40px 5%;
+    }
+
+    .auth-container{
+        padding:40px 20px;
+    }
+
+}
+
+/* ==========================================
+   Print
+========================================== */
+
+@media print{
+
+    .navbar,
+    .top-bar,
+    footer,
+    .newsletter,
+    .btn,
+    .pagination,
+    .nav-icons{
+        display:none;
+    }
+
+    body{
+        background:#fff;
+        color:#000;
+    }
+
+    section{
+        padding:0;
+    }
+
+}
+
+/* ==========================================
+   Home Page Responsive Polish
+========================================== */
+
+@media (max-width:1200px){
+
+    .category-container{
+        grid-template-columns:repeat(3, minmax(160px, 1fr));
+    }
+
+}
+
+@media (max-width:992px){
+
+    .hero{
+        align-items:flex-start;
+        text-align:left;
+        min-height:600px;
+        padding:100px 6%;
+    }
+
+    .hero-content{
+        order:0;
+    }
+
+    .hero-content h1{
+        font-size:44px;
+    }
+
+    .flash-sale{
+        min-height:340px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    header > .menu{
+        flex-wrap:wrap;
+        padding:10px 16px 14px;
+    }
+
+    header > .menu a{
+        padding:8px 14px;
+    }
+
+    .hero{
+        min-height:560px;
+        padding:84px 24px;
+        background-position:center right 35%;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .category-container{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+
+    .categories h2,
+    .featured h2,
+    .trending h2,
+    .reviews h2,
+    .newsletter h2{
+        font-size:28px;
+    }
+
+    .sale-content h1{
+        font-size:36px;
+    }
+
+    .newsletter-box{
+        border-radius:18px;
+        flex-direction:column;
+    }
+
+    .newsletter-box button{
+        width:100%;
+    }
+
+}
+
+@media (max-width:576px){
+
+    #backToTop{
+        right:18px;
+        bottom:18px;
+        width:42px;
+        height:42px;
+    }
+
+    .hero{
+        min-height:520px;
+        padding:72px 20px;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .hero .btn{
+        width:auto;
+        min-width:160px;
+    }
+
+    .category-container{
+        gap:14px;
+    }
+
+    .category-card{
+        min-height:130px;
+    }
+
+    .flash-sale{
+        min-height:320px;
+        background-position:center right 30%;
+    }
+
+    .review-card{
+        padding:24px;
+    }
+
+}

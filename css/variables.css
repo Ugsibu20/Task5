@@ -1,0 +1,116 @@
+/* ==========================================
+   ElectroMart CSS Variables
+   ========================================== */
+
+:root {
+
+    /* ===== Primary Colors ===== */
+
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #dbeafe;
+
+    /* ===== Secondary Colors ===== */
+
+    --secondary-color: #f97316;
+    --secondary-dark: #ea580c;
+    --secondary-light: #ffedd5;
+
+    /* ===== Success ===== */
+
+    --success-color: #16a34a;
+    --success-light: #dcfce7;
+
+    /* ===== Danger ===== */
+
+    --danger-color: #dc2626;
+    --danger-light: #fee2e2;
+
+    /* ===== Warning ===== */
+
+    --warning-color: #facc15;
+    --warning-light: #fef9c3;
+
+    /* ===== Text Colors ===== */
+
+    --text-dark: #111827;
+    --text-medium: #4b5563;
+    --text-light: #6b7280;
+
+    /* ===== Background ===== */
+
+    --bg-color: #f8fafc;
+    --white: #ffffff;
+    --black: #000000;
+
+    /* ===== Border ===== */
+
+    --border-color: #e5e7eb;
+
+    /* ===== Card ===== */
+
+    --card-bg: #ffffff;
+
+    /* ===== Shadow ===== */
+
+    --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
+
+    --shadow-md: 0 8px 20px rgba(0,0,0,.12);
+
+    --shadow-lg: 0 15px 35px rgba(0,0,0,.18);
+
+    /* ===== Radius ===== */
+
+    --radius-sm: 6px;
+
+    --radius-md: 10px;
+
+    --radius-lg: 18px;
+
+    --radius-xl: 30px;
+
+    /* ===== Font ===== */
+
+    --font-family: "Poppins", sans-serif;
+
+    /* ===== Font Sizes ===== */
+
+    --fs-xs: 12px;
+
+    --fs-sm: 14px;
+
+    --fs-md: 16px;
+
+    --fs-lg: 18px;
+
+    --fs-xl: 24px;
+
+    --fs-2xl: 32px;
+
+    --fs-3xl: 42px;
+
+    /* ===== Font Weight ===== */
+
+    --fw-light: 300;
+
+    --fw-normal: 400;
+
+    --fw-medium: 500;
+
+    --fw-semibold: 600;
+
+    --fw-bold: 700;
+
+    /* ===== Container ===== */
+
+    --container-width: 1200px;
+
+    /* ===== Header ===== */
+
+    --header-height: 80px;
+
+    /* ===== Transition ===== */
+
+    --transition: all .3s ease;
+
+}
